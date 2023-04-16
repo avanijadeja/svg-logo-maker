@@ -76,7 +76,7 @@ function promptUser() {
         .then((answers) => {
             // if user enter more than 3 character in text prompt than its display console.log message and again call promptUser() function
             if (answers.text.length > 3) {
-                console.log("Must enter a value of no more than 3 characters");
+                console.log("More than 3 characters are not allowed for text on logo.");
                 promptUser();
             } else {
 
