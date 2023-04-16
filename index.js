@@ -37,9 +37,54 @@ function writeToFile(fileName, answers) {
     svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
     svgString += "</g>";
     svgString += "</svg>";
-    
+
     //Generate logo.svg file using writeFile() function and if error occur then its print error message.
     fs.writeFile(fileName, svgString, (err) => {
         err ? console.log(err) : console.log("Generated logo.svg");
     });
 }
+
+// promptUser() function takes user inputs from command line using inquirer prompt() method 
+function promptUser() {
+    inquirer
+        .prompt([
+            {
+                type: "input",
+                message:
+                    "What text would you like you logo to display? (Enter up to three characters)",
+                name: "text",
+            },
+            {
+                type: "input",
+                message:
+                    "Choose text color (Enter color keyword OR a hexadecimal number)",
+                name: "textColor",
+            },
+            {
+                type: "list",
+                message: "What shape would you like the logo to render?",
+                choices: ["Triangle", "Square", "Circle"],
+                name: "shape",
+            },
+            {
+                type: "input",
+                message:
+                    "Choose shapes color (Enter color keyword OR a hexadecimal number)",
+                name: "shapeBackgroundColor",
+            },
+        ])
+        .then((answers) => {
+            // if user enter more than 3 character in text prompt than its display console.log message and again call promptUser() function
+            if (answers.text.length > 3) {
+                console.log("Must enter a value of no more than 3 characters");
+                promptUser();
+            } else {
+
+                //else it generate logo.svg file using writeTOFile() function
+                writeToFile("logo.svg", answers);
+            }
+        });
+}
+
+// promptUser() function call 
+promptUser();
