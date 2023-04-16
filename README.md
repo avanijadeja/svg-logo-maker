@@ -34,7 +34,8 @@ In this application I used nodejs, inquirer and jest. here are steps to user hav
 
 # Usage
 
-Must have terminal to use.
+Must have terminal to use.install inquirer and jest.
+
 Here I attached some screenshots, links.
 ![validation for text on logo](./Assets/validation%20error%20for%20text.png)
 ![npm run test](./Assets/npm%20run%20test.png)
