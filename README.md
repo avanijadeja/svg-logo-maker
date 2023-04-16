@@ -39,7 +39,9 @@ Must have terminal to use.install inquirer and jest.
 Here I attached some screenshots, links.
 ![validation for text on logo](./Assets/validation%20error%20for%20text.png)
 ![npm run test](./Assets/npm%20run%20test.png)
-
+![sample logo.svg file for circle](./Assets/circle.logo.png)
+![sample logo.svg file for triangle](./Assets/triangle.logo.png)
+![sample logo.svg file for square](./Assets/square.logo.png)
 
 
 
