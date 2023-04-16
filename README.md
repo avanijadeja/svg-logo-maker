@@ -6,7 +6,7 @@ SVG logo maker application is node.js command line application that takes in use
 
 In this application,User have to run this application in terminal and write node index.js then user have to answers questions like what text user wants on logo, text color, shape, background color of logo.in this text validation is enter up to 3 characters only in text.more than 3 characters are not allowed for logo text. also user have to select one shape from 3 options like triangle,circle,square.User can add hexadecimal value or color keyword for text and background color for logo.if user enter correct answers for all questions then "Generated logo.svg" message appear in terminal and logo.svg file is generated.to see the output of logo,right click on logo.svg file and in browser user can see logo of their choice like what they answers in terminal.
 
-In this application, I used node.js inquirer method and using prompt I can take user inputs for logo.also I generate the logo.svg file using command line.In lib folder I save shapes.js file in which I create main shape class as parent class and 3 child classes triangle,circle,square which inherits properties of parent class.Also in this application I use jest framework for run my units test.for this I created shapes.test.js file in which for all 3 classes triangle,circle and square.so through this application I learn oop concepts like inheritance, jest framework, inquirer prompt method to collect inputs, create file using command line. So I increase my knowledge in oop and node.js.
+In this application, I used node.js inquirer method and using prompt I can take user inputs for logo.also I generate the logo.svg file using command line.In lib folder I save shapes.js file in which I create main shape class as parent class and 3 child classes triangle,circle,square which inherits properties of parent class.Also in this application I use jest framework to run my units test.for this I created shapes.test.js file in which for all 3 classes triangle,circle and square have render() method that returns a string for corresponding SVG file with give shape color.so through this application I learn oop concepts like inheritance, jest framework, inquirer prompt method to collect inputs, create file using command line. So I increase my knowledge in oop and node.js.
 
 # Table of Contents
 - [Installation](#installation)
@@ -36,6 +36,16 @@ In this application I used nodejs, inquirer and jest. here are steps to user hav
 
 Must have terminal to use.
 Here I attached some screenshots, links.
+![validation for text on logo](./Assets/validation%20error%20for%20text.png)
+![npm run test](./Assets/npm%20run%20test.png)
+
+
+
+
+A walkthrough video demonstrating the functionality of the application - https://drive.google.com/file/d/1bRC3tnCThGJWCIryFGdPPt_0Wrx6oIEj/view?usp=sharing
+
+The URL of github repository - https://github.com/avanijadeja/svg-logo-maker
+
 
 
 ## Credits
